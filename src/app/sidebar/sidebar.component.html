@@ -1,10 +1,6 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading">Categorias</div>
-    <div class="list-group list-group-flush">
-      <a href="#" class="list-group-item list-group-item-action bg-light">Gamming</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Deportes</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Peliculas</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Series & Tv</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light">Musica</a>
+    <div class="list-group list-group-flush" *ngFor="let category of categories">
+      <a href="#" class="list-group-item list-group-item-action bg-light">{{category.name}}</a>
     </div>
   </div>
