@@ -8,6 +8,8 @@ import { NavUserComponent } from './nav-user/nav-user.component';
 import { NavegationComponent } from './navegation/navegation.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { PostComponent } from './post/post.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     NavUserComponent,
     NavegationComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    PostComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,

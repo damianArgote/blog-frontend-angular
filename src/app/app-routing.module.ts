@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {PostsComponent} from './posts/posts.component';
+import {PostDetailComponent} from './post-detail/post-detail.component';
 
 const routes: Routes = [
-  {path:'posts', component:PostsComponent}
+  {path:'', component:PostsComponent},
+  {path:'posts/:id', component:PostDetailComponent}
 ];
 
 @NgModule({
@@ -11,4 +13,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [PostsComponent]
+export const routingComponents = [PostsComponent,PostDetailComponent]
