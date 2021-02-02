@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostComponent } from './post/post.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { FormPostComponent } from './form-post/form-post.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     FooterComponent,
     SidebarComponent,
     PostComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    FormPostComponent
   ],
   imports: [
     BrowserModule,
