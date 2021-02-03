@@ -24,10 +24,5 @@ export class SidebarComponent implements OnInit {
     );
   }
 
-  addCategory(category:Category){
-    this.categoriesService.add(category);
-  }
-
-
 
 }

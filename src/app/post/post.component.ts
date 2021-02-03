@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {Post} from '../Post.model';
 
 @Component({
@@ -9,11 +10,14 @@ import {Post} from '../Post.model';
 export class PostComponent implements OnInit {
 
   @Input() post:Post;
+  @Input() i:number;
 
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+
+    console.log(this.post)
   }
 
 }

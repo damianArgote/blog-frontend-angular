@@ -21,10 +21,6 @@ export class CategoriesService{
         return this.apiService.getAllCategories();
     }
 
-    add(category:Category){
-        this.categories.push(category);
-        this.apiService.saveCategories(this.categories);
-    }
 
     
 

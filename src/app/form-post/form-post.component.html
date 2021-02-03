@@ -1,1 +1,59 @@
-<p>form-post works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <form [formGroup]="postForm" (ngSubmit)="send(postForm.value)">
+        <div class="form-group">
+          <label for="name">Titulo</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Titulo del Post"
+            formControlName="name"
+          />
+        </div>
+
+        
+
+        <div class="form-group">
+          <label for="image">Imagen</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="URL image"
+            formControlName="image"
+          />
+        </div>
+
+       
+
+        <div class="form-group">
+          <label for="content">Contenido aqui...</label>
+          <textarea 
+            class="form-control" 
+            rows="5"
+            formControlName="content"  
+          ></textarea>
+        </div>
+
+       
+
+        <div class="form-group">
+          <label for="categories">Categorias</label>
+          <select 
+            class="form-control"
+            formControlName="categoryId"
+            >
+            <option value="">--Seleccionar categoria--</option>
+            <option *ngFor="let category of categories; let i = index" value={{i+1}}>{{category.name}}</option>
+            
+          </select>
+        </div>
+
+        <button [disabled]="postForm.invalid" type="submit" class="btn btn-primary mb-2">
+          Publicar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

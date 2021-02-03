@@ -18,13 +18,20 @@ export class ApiService {
   getAllPosts(){
     return  this.httpClient.get<Post[]>('http://blog-backend.test/api/posts');
   }
-  
-  saveCategories(categories:Category[]){
-    this.httpClient.post('http://blog-backend.test/api/categories',categories)
-    .subscribe(
-      res => console.log(res),
-      err => console.log(err)
-    );
+
+  getPostById(id:number){
+    return this.httpClient.get<Post>(`http://blog-backend.test/api/posts/${id}`);
   }
+
+  setNewPost(data:any){
+    this.httpClient.post('http://blog-backend.test/api/posts',data)
+    .subscribe(
+      response => (
+        console.log(response)
+      ),
+      error => console.log(error)
+    )
+  }
+  
 
 }

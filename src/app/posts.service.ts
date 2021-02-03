@@ -11,14 +11,17 @@ export class PostsService {
 
   constructor(private apiService:ApiService) { }
 
-  setPosts(posts:Post[]){
-    this.posts=posts;
+  setPosts(data:any){
+    this.apiService.setNewPost(data);
   }
 
-  
   getPosts(){
 
     return this.apiService.getAllPosts();
+  }
+
+  getById(id:number){
+    return this.apiService.getPostById(id);
   }
 
 }
